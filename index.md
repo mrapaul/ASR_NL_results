@@ -41,7 +41,7 @@ The results in **bold** indicate the best performance for the specific subset(s)
 - [Results on the Medicijnjournaal corpus (HoMed)](./Vlotspraak/wer.md)
 - [Environment setup](./Vlotspraak/environment.md)
 
-Results of the proprietary Lange Jaap v0.4.0 model on 30 episodes of the Medicijnjournaal corpus, scored with the official ASR_NL_benchmark Docker tool. Model weights are not publicly released; the full sclite per-episode output is committed for inspection.
+Results of the proprietary Vlotspraak Dutch ASR model (11.4% WER) on 30 episodes of the Medicijnjournaal corpus, scored with the official ASR_NL_benchmark Docker tool. Model weights are not publicly released; the full sclite per-episode output is committed for inspection.
 
 ## Contributions
 Feel free to click the link at the top that leads you to the GitHub repository of this website. You may add changes if you want by forking the repository, making changes on your fork, then opening a pull request on the source repository.
