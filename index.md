@@ -34,14 +34,15 @@ These results were achieved during the PDI-SSH **Ho**mo **Med**icinalis ([HoMed]
 
 The results in **bold** indicate the best performance for the specific subset(s) between all models. The lower, the better.
 
-<h2>Vlotspraak's medical-domain benchmark</h2>
+<h2>Vlotspraak's results</h2>
 
 *Vlotspraak = commercial Dutch ASR (on-premise), CodeSpark Tech*
 
+- [Results on Common Voice (nl)](./Vlotspraak/CommonVoice/wer.md)
 - [Results on the Medicijnjournaal corpus (HoMed)](./Vlotspraak/wer.md)
 - [Environment setup](./Vlotspraak/environment.md)
 
-Results of the proprietary Vlotspraak Dutch ASR model (11.4% WER) on 30 episodes of the Medicijnjournaal corpus, scored with the official ASR_NL_benchmark Docker tool. Model weights are not publicly released; the full sclite per-episode output is committed for inspection.
+Results of the proprietary Vlotspraak Dutch ASR model, scored with the official ASR_NL_benchmark Docker tool (NIST sclite). **Common Voice 17.0 NL test: 3.5% WER** on the full 11,266-clip set — below the current best result on this board (faster-whisper v3, 4.3%), with a documented train-on-test contamination check (0.08%) and a same-model control that reproduces the 4.3% incumbent exactly. **Medicijnjournaal (HoMed) held-out medical: 11.4% WER** on 30 episodes, below the trained Wav2vec2.0 (12.8%) and Kaldi-NL (16.1%) baselines, with no medical training data. Model weights are not publicly released; the full sclite output is committed for inspection.
 
 ## Contributions
 Feel free to click the link at the top that leads you to the GitHub repository of this website. You may add changes if you want by forking the repository, making changes on your fork, then opening a pull request on the source repository.
