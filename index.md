@@ -1,41 +1,48 @@
 <h1>Dutch Open Speech Recognition Benchmark</h1>
 
-Welcome to the benchmark page where researchers and developers report performance of various ASR models on Dutch datasets.
+Welcome to the Dutch Open Speech Recognition Benchmark website! We encourage contributions from all researchers and developers working with Dutch Automatic Speech Recognition.
 
-<h2>UT's benchmark</h2>
+## OH-SMArt Project Benchmark
 
-*UT = University of Twente*
+The following results were achieved during the PDI-SSH **O**ral **H**istory - **S**tories at the **M**useum around **Art** ([OH-SMArt](https://www.uva.nl/en/discipline/conservation-and-restoration/research/research-projects/oh-smart/oh-smart.html)) project (2022-2025) and are reported by University of Twente:
 
-- [Results for N-Best 2008 Dutch Evaluation corpus](./UT/N-Best/nbest_res.md)
-- [Results for Jasmin-CGN corpus](./UT/Jasmin/jasmin.md)
-- [Results for Common Voice](./UT/CommonVoice/cv.md)
-- [Environment setup](./UT/environment.md)
-- [Why do the results differ between whisper-timestamped and faster-whisper?](./UT/analysis.md)
+### [Broadcast News and Telephone Conversations (N-Best) Benchmark](./OH-SMArt/N-Best/nbest_res.md)
 
-The results in **bold** indicate the best performance for the specific subset(s) between all models. The lower, the better.
+### [Underrepresented Speakers (JASMIN-CGN) Benchmark](./OH-SMArt/JASMIN/jasmin.md)
 
-These results were achieved during the PDI-SSH **O**ral **H**istory - **S**tories at the **M**useum around **Art** ([OH-SMArt](https://www.uva.nl/en/discipline/conservation-and-restoration/research/research-projects/oh-smart/oh-smart.html)) project (2022-2025).
+### [Common Voice (CV) Benchmark](./OH-SMArt/CommonVoice/cv.md)
 
-<h2>RU's Kaldi_NL vs. Whisper vs. Wav2vec2.0 evaluation</h2>
+### [Pathological Speech (COPAS) Benchmark*](./OH-SMArt/COPAS/copas_res.md)
 
-*RU = Radboud University*
+*These results were obtained during and after the project, in preparation for Interspeech 2025.
 
-- [Results on four medical domain datasets](./RU/wer.md)
-- [Environment setup](./RU/environment.md)
+#### [Environment setup for benchmarks above](./OH-SMArt/environment.md)
 
-These results were achieved during the PDI-SSH **Ho**mo **Med**icinalis ([HoMed](https://homed.ruhosting.nl/)) project (2021-2024).
+#### [Why do the results differ between whisper-timestamped and faster-whisper?](./OH-SMArt/analysis.md)
 
-<h2>NISV's Whisper benchmark</h2>
+## Medical Speech (HoMed) Benchmark
 
-*NISV = Netherlands Institute for Sound & Vision*
+The following results were achieved during the PDI-SSH **Ho**mo **Med**icinalis ([HoMed](https://homed.ruhosting.nl/)) project (2021-2024) and are reported by Radboud University:
 
-- [Results for Broadcast News Speech](./NISV/bn_nl/intro_bn_nl.md)
-- [Results for Conversational Telephone Speech](./NISV/cts_nl/intro_cts_nl.md)
+### [Results](./HoMed/wer.md)
 
-The results in **bold** indicate the best performance for the specific subset(s) between all models. The lower, the better.
+### [Environment setup](./HoMed/environment.md)
+
+## NISV's Whisper Benchmark
+
+*NISV = Netherlands Institute for Sound & Vision (**NL**: Nederlands Instituut voor Beeld & Geluid)*
+
+The following results were achieved during the same ([OH-SMArt](https://www.uva.nl/en/discipline/conservation-and-restoration/research/research-projects/oh-smart/oh-smart.html)) project mentioned above and are reported by University of Twente in collaboration with NISV:
+
+### [Results for Broadcast News Speech](./NISV/bn_nl/intro_bn_nl.md)
+
+### [Results for Conversational Telephone Speech](./NISV/cts_nl/intro_cts_nl.md)
+
+## Data selection for ASR adaptation
+
+The following results were achieved as part of a Ph.D study, funded by the first phase of the HOSAN project (2025) and the MediSpeech project (2025-2028), and are reported by University of Twente:
+
+### [Results](./UT-data-selection/results.md)
 
 ## Contributions
 Feel free to click the link at the top that leads you to the GitHub repository of this website. You may add changes if you want by forking the repository, making changes on your fork, then opening a pull request on the source repository.
-
-## FAQ
-**Coming soon**
