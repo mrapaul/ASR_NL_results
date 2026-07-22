@@ -1,51 +1,64 @@
 <h1>Dutch Open Speech Recognition Benchmark</h1>
 
-Welcome to the benchmark page where researchers and developers report performance of various ASR models on Dutch datasets.
+Welcome to the Dutch Open Speech Recognition Benchmark website! We encourage contributions from all researchers and developers working with Dutch Automatic Speech Recognition.
 
-<h2>UT's benchmark</h2>
+## OH-SMArt Project Benchmark
 
-*UT = University of Twente*
+The following results were achieved during the PDI-SSH **O**ral **H**istory - **S**tories at the **M**useum around **Art** ([OH-SMArt](https://www.uva.nl/en/discipline/conservation-and-restoration/research/research-projects/oh-smart/oh-smart.html)) project (2022-2025) and are reported by University of Twente:
 
-- [Results for N-Best 2008 Dutch Evaluation corpus](./UT/N-Best/nbest_res.md)
-- [Results for Jasmin-CGN corpus](./UT/Jasmin/jasmin.md)
-- [Results for Common Voice](./UT/CommonVoice/cv.md)
-- [Environment setup](./UT/environment.md)
-- [Why do the results differ between whisper-timestamped and faster-whisper?](./UT/analysis.md)
+### [Broadcast News and Telephone Conversations (N-Best) Benchmark](./OH-SMArt/N-Best/nbest_res.md)
 
-The results in **bold** indicate the best performance for the specific subset(s) between all models. The lower, the better.
+### [Underrepresented Speakers (JASMIN-CGN) Benchmark](./OH-SMArt/JASMIN/jasmin.md)
 
-These results were achieved during the PDI-SSH **O**ral **H**istory - **S**tories at the **M**useum around **Art** ([OH-SMArt](https://www.uva.nl/en/discipline/conservation-and-restoration/research/research-projects/oh-smart/oh-smart.html)) project (2022-2025).
+### [Common Voice (CV) Benchmark](./OH-SMArt/CommonVoice/cv.md)
 
-<h2>RU's Kaldi_NL vs. Whisper vs. Wav2vec2.0 evaluation</h2>
+### [Pathological Speech (COPAS) Benchmark*](./OH-SMArt/COPAS/copas_res.md)
 
-*RU = Radboud University*
+*These results were obtained during and after the project, in preparation for Interspeech 2025.
 
-- [Results on four medical domain datasets](./RU/wer.md)
-- [Environment setup](./RU/environment.md)
+#### [Environment setup for benchmarks above](./OH-SMArt/environment.md)
 
-These results were achieved during the PDI-SSH **Ho**mo **Med**icinalis ([HoMed](https://homed.ruhosting.nl/)) project (2021-2024).
+#### [Why do the results differ between whisper-timestamped and faster-whisper?](./OH-SMArt/analysis.md)
 
-<h2>NISV's Whisper benchmark</h2>
+## Medical Speech (HoMed) Benchmark
 
-*NISV = Netherlands Institute for Sound & Vision*
+The following results were achieved during the PDI-SSH **Ho**mo **Med**icinalis ([HoMed](https://homed.ruhosting.nl/)) project (2021-2024) and are reported by Radboud University:
 
-- [Results for Broadcast News Speech](./NISV/bn_nl/intro_bn_nl.md)
-- [Results for Conversational Telephone Speech](./NISV/cts_nl/intro_cts_nl.md)
+### [Results](./HoMed/wer.md)
 
-The results in **bold** indicate the best performance for the specific subset(s) between all models. The lower, the better.
+### [Environment setup](./HoMed/environment.md)
 
-<h2>Vlotspraak's results</h2>
+## NISV's Whisper Benchmark
 
-*Vlotspraak = commercial Dutch ASR (on-premise), CodeSpark Tech*
+*NISV = Netherlands Institute for Sound & Vision (**NL**: Nederlands Instituut voor Beeld & Geluid)*
 
-- [Results on Common Voice (nl)](./Vlotspraak/CommonVoice/wer.md)
-- [Results on the Medicijnjournaal corpus (HoMed)](./Vlotspraak/wer.md)
-- [Environment setup](./Vlotspraak/environment.md)
+The following results were achieved during the same ([OH-SMArt](https://www.uva.nl/en/discipline/conservation-and-restoration/research/research-projects/oh-smart/oh-smart.html)) project mentioned above and are reported by University of Twente in collaboration with NISV:
 
-Results of the proprietary Vlotspraak Dutch ASR model, scored with the official ASR_NL_benchmark Docker tool (NIST sclite). **Common Voice 17.0 NL test: 3.5% WER** on the full 11,266-clip set — below the current best result on this board (faster-whisper v3, 4.3%), with a documented train-on-test contamination check (0.08%) and a same-model control that reproduces the 4.3% incumbent exactly. **Medicijnjournaal (HoMed) held-out medical: 11.4% WER** on 30 episodes, below the trained Wav2vec2.0 (12.8%) and Kaldi-NL (16.1%) baselines, with no medical training data. Model weights are not publicly released; the full sclite output is committed for inspection.
+### [Results for Broadcast News Speech](./NISV/bn_nl/intro_bn_nl.md)
+
+### [Results for Conversational Telephone Speech](./NISV/cts_nl/intro_cts_nl.md)
+
+## Data selection for ASR adaptation
+
+The following results were achieved as part of a Ph.D study, funded by the first phase of the HOSAN project (2025) and the MediSpeech project (2025-2028), and are reported by University of Twente:
+
+### [Results](./UT-data-selection/results.md)
+
+## Vlotspraak's results
+
+*Vlotspraak = a proprietary, on-premise commercial Dutch ASR model, developed by CodeSpark Tech*
+
+The following results were produced by CodeSpark Tech and scored with the official [ASR_NL_benchmark](https://github.com/opensource-spraakherkenning-nl/ASR_NL_benchmark) Docker tool (text normalization + NIST sclite). The model weights are commercial and not publicly released, but the full sclite output is committed so the scoring itself is inspectable.
+
+### [Common Voice (nl) Benchmark](./Vlotspraak/CommonVoice/wer.md)
+
+Common Voice 17.0 NL test: **3.5% WER** on the full 11,266-clip set. A same-model faster-whisper-large-v3 control on the identical clips reproduces the 4.3% figure reported for that model on this board, and a train-on-test contamination check is documented (0.08% overlap).
+
+### [Medicijnjournaal (HoMed) Benchmark](./Vlotspraak/wer.md)
+
+Held-out medical audio, no medical data in training: **11.4% WER** on 30 of the 35 HoMed Medicijnjournaal episodes (the audio we could retrieve). This is a different subset than the 35-file RU evaluation, so it is indicative rather than a like-for-like comparison - see the page for the full caveat.
+
+### [Environment setup](./Vlotspraak/environment.md)
 
 ## Contributions
 Feel free to click the link at the top that leads you to the GitHub repository of this website. You may add changes if you want by forking the repository, making changes on your fork, then opening a pull request on the source repository.
-
-## FAQ
-**Coming soon**

@@ -12,7 +12,7 @@
 
 *Ground truth*: [https://doi.org/10.34973/dpjc-0v85](https://doi.org/10.34973/dpjc-0v85)
 
-*Subset note*: 30 of the 35 HoMed episodes (the episodes whose source audio we could retrieve at benchmark-construction time). Results are indicative but not computed on the identical 35-file set used in [RU's evaluation](../RU/wer.md) (Wav2vec2.0 12.8%, Kaldi-NL 16.1% on 35 files).
+*Subset note*: 30 of the 35 HoMed episodes (the episodes whose source audio we could retrieve at benchmark-construction time). Results are indicative but not computed on the identical 35-file set used in [the HoMed evaluation](../HoMed/wer.md) (Wav2vec2.0 12.8%, Kaldi-NL 16.1% on 35 files).
 
 |ASR system|WER (%)|GPUs|
 |---|---|---|
