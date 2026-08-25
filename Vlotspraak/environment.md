@@ -2,7 +2,9 @@
 
 # Environment setup
 
-**Vlotspraak Dutch ASR**: proprietary Dutch ASR model (Whisper large-v3 architecture, 1.55B parameters), fine-tuned from [`yuriyvnv/whisper-large-v3-high-mixed-nl`](https://huggingface.co/yuriyvnv/whisper-large-v3-high-mixed-nl) (Apache-2.0) on CommonVoice 25 NL, FLEURS NL, VoxPopuli NL and MLS NL train splits. Served via [faster-whisper](https://github.com/SYSTRAN/faster-whisper) 1.2.1 / CTranslate2 (float16 weights).
+**Vlotspraak Dutch ASR**: proprietary Dutch ASR model (Whisper large-v3 architecture, 1.55B parameters), fine-tuned from [`yuriyvnv/whisper-large-v3-high-mixed-nl`](https://huggingface.co/yuriyvnv/whisper-large-v3-high-mixed-nl) (Apache-2.0) on CommonVoice 25 NL, FLEURS NL, VoxPopuli NL, MLS NL and VoxForge NL train splits. Served via [faster-whisper](https://github.com/SYSTRAN/faster-whisper) 1.2.1 / CTranslate2 (float16 weights).
+
+**Training-corpus licensing**: Common Voice 25 NL is CC0-1.0; FLEURS NL and MLS NL are CC-BY-4.0 (attribution to Google Research and to Pratap et al. respectively); VoxPopuli NL is CC0 plus European Parliament source terms; VoxForge NL is **GPL-3.0**. On the last one: there is no industry consensus that model weights trained on GPL-licensed audio become GPL-encumbered, and Vlotspraak treats trained weights as not a derivative work of the training data, since the model redistributes neither the audio nor the transcripts. It is listed here explicitly so the corpus composition can be judged rather than assumed. A VoxForge-free build variant is available on request.
 
 **Hardware**: single NVIDIA GeForce RTX 5090 Laptop GPU (24 GB VRAM), driver 595.71, Linux (Ubuntu).
 

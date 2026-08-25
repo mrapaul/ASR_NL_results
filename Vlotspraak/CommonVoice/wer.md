@@ -4,7 +4,7 @@
 
 - WER of **Vlotspraak Dutch ASR**, a proprietary commercial Dutch ASR model (Whisper large-v3
   architecture, fine-tuned from [`yuriyvnv/whisper-large-v3-high-mixed-nl`](https://huggingface.co/yuriyvnv/whisper-large-v3-high-mixed-nl),
-  Apache-2.0, on Common Voice 25 NL + FLEURS NL + VoxPopuli NL + MLS NL), on the **Common Voice
+  Apache-2.0, on Common Voice 25 NL + FLEURS NL + VoxPopuli NL + MLS NL + VoxForge NL), on the **Common Voice
   17.0 NL test set**, the same test set used for the [community Common Voice benchmark](../../OH-SMArt/CommonVoice/cv.md).
 - Scored with the official [ASR_NL_benchmark](https://github.com/opensource-spraakherkenning-nl/ASR_NL_benchmark)
   Docker tool (text normalization + `variations.glm` + NIST sclite), image
